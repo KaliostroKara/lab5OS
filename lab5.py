@@ -4,12 +4,12 @@ import time
 
 def f(x):
     """Функція f(x): перевірка, чи більше x нуля."""
-    time.sleep(6)  # Імітація тривалої операції
+    time.sleep(6)  
     return x > 0
 
 def g(x):
     """Функція g(x): перевірка, чи менше x нуля."""
-    time.sleep(7)  # Імітація тривалої операції
+    time.sleep(7)  
     return x < 0
 
 
@@ -33,7 +33,7 @@ def main(x):
     results = {}
     dont_ask = False  # Ініціалізація змінної dont_ask
     continue_computation = True
-    ask_interval = 10  # Інтервал запитування користувача у секундах
+    ask_interval = 10  # Інтервал юзера у секундах
     last_ask_time = time.time()
 
     while continue_computation:
