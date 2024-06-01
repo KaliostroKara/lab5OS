@@ -3,13 +3,11 @@ import time
 
 
 def f(x):
-    """Функція f(x): перевірка, чи більше x нуля."""
-    time.sleep(6)  
+    time.sleep(6)
     return x > 0
 
 def g(x):
-    """Функція g(x): перевірка, чи менше x нуля."""
-    time.sleep(7)  
+    time.sleep(7)
     return x < 0
 
 
@@ -31,7 +29,7 @@ def main(x):
     g_process.start()
 
     results = {}
-    dont_ask = False  # Ініціалізація змінної dont_ask
+    dont_ask = False  
     continue_computation = True
     ask_interval = 10  # Інтервал юзера у секундах
     last_ask_time = time.time()
@@ -73,9 +71,9 @@ def main(x):
             if 'f' in results and 'g' in results:
                 logic_or_result = results['f'] or results['g']
                 print(f"f(x) || g(x) result: {logic_or_result}")
-                break  # Завершити після отримання результату
+                break  
         except mp.queues.Empty:
-            continue  # Продовжити очікування результатів
+            continue
 
     f_process.terminate()
     g_process.terminate()
